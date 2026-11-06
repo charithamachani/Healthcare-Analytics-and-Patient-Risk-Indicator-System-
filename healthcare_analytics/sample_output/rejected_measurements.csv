@@ -1,0 +1,500 @@
+measurement_id,patient_id,measurement_date,measure_type,value,unit,reject_reason
+11,1,2025-07-03,spo2,,%,value is missing or not finite
+65,3,2025-01-09,spo2,,%,value is missing or not finite
+97,3,2025-08-26,systolic_bp,0.0,mmHg,value 0 outside plausible range 50-300 mmHg
+165,6,2025-03-23,heart_rate,82.0,unknown,"unit must be 'bpm', got 'unknown'"
+173,6,2025-03-28,spo2,97.0,unknown,"unit must be '%', got 'unknown'"
+184,6,2025-06-27,body_temp_c,36.7,unknown,"unit must be 'C', got 'unknown'"
+204,7,2025-01-02,blood_glucose,-1.0,mg/dL,value -1 outside plausible range 20-800 mg/dL
+215,7,2025-04-25,spo2,0.0,%,value 0 outside plausible range 50-100 %
+458,15,2025-01-06,diastolic_bp,0.0,mmHg,value 0 outside plausible range 30-200 mmHg
+556,17,2025-04-02,body_temp_c,0.0,C,value 0 outside plausible range 30-43 C
+585,17,2025-11-29,heart_rate,400.0,bpm,value 400 outside plausible range 20-250 bpm
+589,18,2025-01-24,systolic_bp,109.0,unknown,"unit must be 'mmHg', got 'unknown'"
+606,18,2025-07-03,blood_glucose,,mg/dL,value is missing or not finite
+611,18,2025-07-21,spo2,0.0,%,value 0 outside plausible range 50-100 %
+622,18,2025-11-12,body_temp_c,0.0,C,value 0 outside plausible range 30-43 C
+683,20,2025-02-22,spo2,150.0,%,value 150 outside plausible range 50-100 %
+785,23,2025-01-20,spo2,,%,value is missing or not finite
+789,23,2025-01-27,heart_rate,,bpm,value is missing or not finite
+860,24,2025-10-24,diastolic_bp,0.0,mmHg,value 0 outside plausible range 30-200 mmHg
+932,26,2025-03-19,diastolic_bp,66.0,unknown,"unit must be 'mmHg', got 'unknown'"
+934,26,2025-03-19,body_temp_c,98.6,C,value 98.6 outside plausible range 30-43 C
+991,27,2025-09-03,systolic_bp,999.0,mmHg,value 999 outside plausible range 50-300 mmHg
+1000,27,2025-09-22,body_temp_c,,C,value is missing or not finite
+1009,27,2025-12-23,systolic_bp,999.0,mmHg,value 999 outside plausible range 50-300 mmHg
+1269,37,2025-07-11,heart_rate,400.0,bpm,value 400 outside plausible range 20-250 bpm
+1294,38,2025-06-14,body_temp_c,,C,value is missing or not finite
+1314,38,2025-12-14,blood_glucose,-1.0,mg/dL,value -1 outside plausible range 20-800 mg/dL
+1343,39,2025-09-15,spo2,0.0,%,value 0 outside plausible range 50-100 %
+1350,39,2025-11-14,blood_glucose,-1.0,mg/dL,value -1 outside plausible range 20-800 mg/dL
+1384,40,2025-11-13,body_temp_c,98.6,C,value 98.6 outside plausible range 30-43 C
+1414,42,2025-01-04,body_temp_c,0.0,C,value 0 outside plausible range 30-43 C
+1425,42,2025-08-15,heart_rate,400.0,bpm,value 400 outside plausible range 20-250 bpm
+1555,47,2025-02-01,systolic_bp,999.0,mmHg,value 999 outside plausible range 50-300 mmHg
+1604,48,2025-01-14,diastolic_bp,,mmHg,value is missing or not finite
+1608,48,2025-01-14,blood_glucose,,mg/dL,value is missing or not finite
+1616,48,2025-07-26,diastolic_bp,0.0,mmHg,value 0 outside plausible range 30-200 mmHg
+1626,49,2025-02-18,blood_glucose,,mg/dL,value is missing or not finite
+1638,49,2025-06-07,blood_glucose,98.0,unknown,"unit must be 'mg/dL', got 'unknown'"
+1678,50,2025-07-18,body_temp_c,0.0,C,value 0 outside plausible range 30-43 C
+1724,52,2025-01-05,diastolic_bp,450.0,mmHg,value 450 outside plausible range 30-200 mmHg
+1761,52,2025-11-28,heart_rate,71.0,unknown,"unit must be 'bpm', got 'unknown'"
+1786,53,2025-07-30,body_temp_c,,C,value is missing or not finite
+1794,53,2025-09-09,blood_glucose,,mg/dL,value is missing or not finite
+1849,55,2025-04-04,systolic_bp,,mmHg,value is missing or not finite
+1904,56,2025-07-14,diastolic_bp,0.0,mmHg,value 0 outside plausible range 30-200 mmHg
+1928,57,2025-04-26,diastolic_bp,450.0,mmHg,value 450 outside plausible range 30-200 mmHg
+1965,58,2025-09-18,heart_rate,400.0,bpm,value 400 outside plausible range 20-250 bpm
+1992,59,2025-05-30,blood_glucose,5000.0,mg/dL,value 5000 outside plausible range 20-800 mg/dL
+2136,63,2025-07-03,blood_glucose,,mg/dL,value is missing or not finite
+2172,65,2025-02-19,blood_glucose,146.0,unknown,"unit must be 'mg/dL', got 'unknown'"
+2176,65,2025-04-13,body_temp_c,,C,value is missing or not finite
+2316,68,2025-03-05,blood_glucose,-1.0,mg/dL,value -1 outside plausible range 20-800 mg/dL
+2355,69,2025-01-18,heart_rate,0.0,bpm,value 0 outside plausible range 20-250 bpm
+2360,69,2025-01-20,diastolic_bp,0.0,mmHg,value 0 outside plausible range 30-200 mmHg
+2384,70,2025-02-01,diastolic_bp,66.0,unknown,"unit must be 'mmHg', got 'unknown'"
+2415,71,2025-02-23,heart_rate,0.0,bpm,value 0 outside plausible range 20-250 bpm
+2438,71,2025-09-07,diastolic_bp,,mmHg,value is missing or not finite
+2442,71,2025-09-07,blood_glucose,,mg/dL,value is missing or not finite
+2444,72,2025-02-24,diastolic_bp,71.0,unknown,"unit must be 'mmHg', got 'unknown'"
+2460,72,2025-09-28,blood_glucose,5000.0,mg/dL,value 5000 outside plausible range 20-800 mg/dL
+2485,73,2025-10-13,systolic_bp,999.0,mmHg,value 999 outside plausible range 50-300 mmHg
+2501,73,2025-12-29,spo2,0.0,%,value 0 outside plausible range 50-100 %
+2560,75,2025-05-03,body_temp_c,37.4,unknown,"unit must be 'C', got 'unknown'"
+2576,75,2025-10-12,diastolic_bp,76.0,unknown,"unit must be 'mmHg', got 'unknown'"
+2631,77,2025-02-06,heart_rate,0.0,bpm,value 0 outside plausible range 20-250 bpm
+2668,77,2025-11-05,body_temp_c,,C,value is missing or not finite
+2690,78,2025-03-16,diastolic_bp,,mmHg,value is missing or not finite
+2740,80,2025-07-09,body_temp_c,0.0,C,value 0 outside plausible range 30-43 C
+2784,82,2025-08-24,blood_glucose,5000.0,mg/dL,value 5000 outside plausible range 20-800 mg/dL
+2788,82,2025-09-22,body_temp_c,98.6,C,value 98.6 outside plausible range 30-43 C
+2793,82,2025-11-01,heart_rate,0.0,bpm,value 0 outside plausible range 20-250 bpm
+2808,83,2025-06-13,blood_glucose,5000.0,mg/dL,value 5000 outside plausible range 20-800 mg/dL
+2900,86,2025-07-24,diastolic_bp,,mmHg,value is missing or not finite
+2913,86,2025-09-15,heart_rate,400.0,bpm,value 400 outside plausible range 20-250 bpm
+2923,87,2025-03-12,systolic_bp,0.0,mmHg,value 0 outside plausible range 50-300 mmHg
+2937,87,2025-08-04,heart_rate,,bpm,value is missing or not finite
+2964,88,2025-08-31,blood_glucose,-1.0,mg/dL,value -1 outside plausible range 20-800 mg/dL
+2967,88,2025-09-08,heart_rate,0.0,bpm,value 0 outside plausible range 20-250 bpm
+2971,88,2025-10-16,systolic_bp,128.0,unknown,"unit must be 'mmHg', got 'unknown'"
+3007,89,2025-06-03,systolic_bp,999.0,mmHg,value 999 outside plausible range 50-300 mmHg
+3068,91,2025-03-06,diastolic_bp,450.0,mmHg,value 450 outside plausible range 30-200 mmHg
+3106,92,2025-02-07,body_temp_c,,C,value is missing or not finite
+3115,92,2025-11-16,systolic_bp,135.0,unknown,"unit must be 'mmHg', got 'unknown'"
+3122,93,2025-01-14,diastolic_bp,450.0,mmHg,value 450 outside plausible range 30-200 mmHg
+3189,95,2025-06-22,heart_rate,67.0,unknown,"unit must be 'bpm', got 'unknown'"
+3220,96,2025-04-18,body_temp_c,98.6,C,value 98.6 outside plausible range 30-43 C
+3251,97,2025-02-11,spo2,0.0,%,value 0 outside plausible range 50-100 %
+3297,98,2025-06-12,heart_rate,82.0,unknown,"unit must be 'bpm', got 'unknown'"
+3325,100,2025-07-26,systolic_bp,999.0,mmHg,value 999 outside plausible range 50-300 mmHg
+3330,100,2025-07-26,blood_glucose,,mg/dL,value is missing or not finite
+3377,101,2025-12-07,spo2,,%,value is missing or not finite
+3412,102,2025-10-01,body_temp_c,0.0,C,value 0 outside plausible range 30-43 C
+3421,103,2025-02-20,systolic_bp,,mmHg,value is missing or not finite
+3477,104,2025-04-24,heart_rate,400.0,bpm,value 400 outside plausible range 20-250 bpm
+3482,104,2025-06-30,diastolic_bp,450.0,mmHg,value 450 outside plausible range 30-200 mmHg
+3543,106,2025-08-31,heart_rate,0.0,bpm,value 0 outside plausible range 20-250 bpm
+3572,107,2025-06-10,diastolic_bp,0.0,mmHg,value 0 outside plausible range 30-200 mmHg
+3637,108,2025-10-05,systolic_bp,114.0,unknown,"unit must be 'mmHg', got 'unknown'"
+3653,109,2025-03-01,spo2,98.0,unknown,"unit must be '%', got 'unknown'"
+3743,111,2025-12-11,spo2,,%,value is missing or not finite
+3780,113,2025-04-07,blood_glucose,,mg/dL,value is missing or not finite
+3789,113,2025-07-09,heart_rate,400.0,bpm,value 400 outside plausible range 20-250 bpm
+3852,115,2025-04-11,blood_glucose,-1.0,mg/dL,value -1 outside plausible range 20-800 mg/dL
+3930,118,2025-01-23,blood_glucose,-1.0,mg/dL,value -1 outside plausible range 20-800 mg/dL
+3999,120,2025-07-18,heart_rate,62.0,unknown,"unit must be 'bpm', got 'unknown'"
+4034,121,2025-11-16,diastolic_bp,66.0,unknown,"unit must be 'mmHg', got 'unknown'"
+4070,122,2025-09-21,diastolic_bp,78.0,unknown,"unit must be 'mmHg', got 'unknown'"
+4112,124,2025-02-26,diastolic_bp,0.0,mmHg,value 0 outside plausible range 30-200 mmHg
+4149,125,2025-09-25,heart_rate,400.0,bpm,value 400 outside plausible range 20-250 bpm
+4204,126,2025-10-14,body_temp_c,98.6,C,value 98.6 outside plausible range 30-43 C
+4277,130,2025-05-20,spo2,150.0,%,value 150 outside plausible range 50-100 %
+4400,133,2025-11-30,diastolic_bp,,unknown,"unit must be 'mmHg', got 'unknown'; value is missing or not finite"
+4440,134,2025-09-01,blood_glucose,-1.0,mg/dL,value -1 outside plausible range 20-800 mg/dL
+4475,135,2025-08-25,spo2,0.0,%,value 0 outside plausible range 50-100 %
+4500,136,2025-10-08,blood_glucose,102.0,unknown,"unit must be 'mg/dL', got 'unknown'"
+4601,139,2025-02-12,spo2,,%,value is missing or not finite
+4634,140,2025-08-06,diastolic_bp,0.0,mmHg,value 0 outside plausible range 30-200 mmHg
+4758,143,2025-04-08,blood_glucose,233.0,unknown,"unit must be 'mg/dL', got 'unknown'"
+4802,144,2025-06-21,diastolic_bp,450.0,mmHg,value 450 outside plausible range 30-200 mmHg
+4810,144,2025-07-12,body_temp_c,98.6,C,value 98.6 outside plausible range 30-43 C
+4814,144,2025-11-16,diastolic_bp,450.0,mmHg,value 450 outside plausible range 30-200 mmHg
+4847,145,2025-04-14,spo2,150.0,%,value 150 outside plausible range 50-100 %
+4984,149,2025-05-04,body_temp_c,98.6,C,value 98.6 outside plausible range 30-43 C
+5028,150,2025-04-14,blood_glucose,121.0,unknown,"unit must be 'mg/dL', got 'unknown'"
+5088,151,2025-05-17,blood_glucose,-1.0,mg/dL,value -1 outside plausible range 20-800 mg/dL
+5104,152,2025-04-15,body_temp_c,,C,value is missing or not finite
+5218,154,2025-10-15,body_temp_c,98.6,C,value 98.6 outside plausible range 30-43 C
+5223,155,2025-02-20,heart_rate,400.0,bpm,value 400 outside plausible range 20-250 bpm
+5320,157,2025-10-19,body_temp_c,37.2,unknown,"unit must be 'C', got 'unknown'"
+5330,158,2025-09-11,diastolic_bp,77.0,unknown,"unit must be 'mmHg', got 'unknown'"
+5367,159,2025-08-12,heart_rate,0.0,bpm,value 0 outside plausible range 20-250 bpm
+5376,159,2025-08-30,blood_glucose,5000.0,mg/dL,value 5000 outside plausible range 20-800 mg/dL
+5450,161,2025-07-29,diastolic_bp,0.0,mmHg,value 0 outside plausible range 30-200 mmHg
+5528,164,2025-11-10,diastolic_bp,450.0,mmHg,value 450 outside plausible range 30-200 mmHg
+5535,165,2025-02-01,heart_rate,0.0,bpm,value 0 outside plausible range 20-250 bpm
+5547,165,2025-06-01,heart_rate,,bpm,value is missing or not finite
+5550,165,2025-06-01,blood_glucose,5000.0,mg/dL,value 5000 outside plausible range 20-800 mg/dL
+5579,166,2025-03-15,spo2,99.0,unknown,"unit must be '%', got 'unknown'"
+5632,168,2025-03-29,body_temp_c,36.4,unknown,"unit must be 'C', got 'unknown'"
+5767,172,2025-12-11,systolic_bp,,mmHg,value is missing or not finite
+5806,174,2025-02-08,body_temp_c,98.6,C,value 98.6 outside plausible range 30-43 C
+5807,174,2025-02-08,spo2,150.0,%,value 150 outside plausible range 50-100 %
+5825,174,2025-11-17,spo2,0.0,%,value 0 outside plausible range 50-100 %
+5866,176,2025-06-06,body_temp_c,98.6,C,value 98.6 outside plausible range 30-43 C
+5868,176,2025-06-06,blood_glucose,86.0,unknown,"unit must be 'mg/dL', got 'unknown'"
+5875,176,2025-10-18,systolic_bp,0.0,mmHg,value 0 outside plausible range 50-300 mmHg
+5886,176,2025-11-26,blood_glucose,,mg/dL,value is missing or not finite
+5909,177,2025-08-05,spo2,100.0,unknown,"unit must be '%', got 'unknown'"
+5915,177,2025-09-23,spo2,0.0,%,value 0 outside plausible range 50-100 %
+5920,177,2025-11-25,body_temp_c,36.8,unknown,"unit must be 'C', got 'unknown'"
+5943,178,2025-04-05,heart_rate,,bpm,value is missing or not finite
+5983,179,2025-03-26,systolic_bp,122.0,unknown,"unit must be 'mmHg', got 'unknown'"
+6011,180,2025-03-01,spo2,150.0,%,value 150 outside plausible range 50-100 %
+6027,180,2025-10-15,heart_rate,400.0,bpm,value 400 outside plausible range 20-250 bpm
+6079,182,2025-10-10,systolic_bp,999.0,mmHg,value 999 outside plausible range 50-300 mmHg
+6259,188,2025-06-02,systolic_bp,0.0,unknown,"unit must be 'mmHg', got 'unknown'; value 0 outside plausible range 50-300 mmHg"
+6279,188,2025-08-02,heart_rate,400.0,bpm,value 400 outside plausible range 20-250 bpm
+6340,190,2025-05-02,body_temp_c,98.6,C,value 98.6 outside plausible range 30-43 C
+6352,190,2025-06-28,body_temp_c,0.0,C,value 0 outside plausible range 30-43 C
+6518,197,2025-01-19,diastolic_bp,0.0,mmHg,value 0 outside plausible range 30-200 mmHg
+6548,197,2025-08-13,diastolic_bp,76.0,unknown,"unit must be 'mmHg', got 'unknown'"
+6571,198,2025-08-14,systolic_bp,,mmHg,value is missing or not finite
+6609,199,2025-05-22,heart_rate,0.0,bpm,value 0 outside plausible range 20-250 bpm
+6634,200,2025-06-03,body_temp_c,36.3,unknown,"unit must be 'C', got 'unknown'"
+6690,201,2025-07-05,blood_glucose,114.0,unknown,"unit must be 'mg/dL', got 'unknown'"
+6701,201,2025-12-04,spo2,150.0,%,value 150 outside plausible range 50-100 %
+6707,202,2025-01-25,spo2,0.0,%,value 0 outside plausible range 50-100 %
+6749,203,2025-01-24,spo2,150.0,%,value 150 outside plausible range 50-100 %
+6754,203,2025-04-03,body_temp_c,98.6,C,value 98.6 outside plausible range 30-43 C
+6777,204,2025-06-23,heart_rate,0.0,bpm,value 0 outside plausible range 20-250 bpm
+6862,206,2025-04-02,body_temp_c,0.0,C,value 0 outside plausible range 30-43 C
+6863,206,2025-04-02,spo2,150.0,%,value 150 outside plausible range 50-100 %
+6870,206,2025-07-24,blood_glucose,101.0,unknown,"unit must be 'mg/dL', got 'unknown'"
+6895,207,2025-04-05,systolic_bp,,mmHg,value is missing or not finite
+6909,207,2025-09-04,heart_rate,,bpm,value is missing or not finite
+6969,208,2025-08-08,heart_rate,,bpm,value is missing or not finite
+7037,210,2025-12-03,spo2,,%,value is missing or not finite
+7086,212,2025-05-24,blood_glucose,-1.0,mg/dL,value -1 outside plausible range 20-800 mg/dL
+7148,214,2025-08-06,diastolic_bp,450.0,mmHg,value 450 outside plausible range 30-200 mmHg
+7154,214,2025-08-11,diastolic_bp,0.0,mmHg,value 0 outside plausible range 30-200 mmHg
+7174,215,2025-01-21,body_temp_c,0.0,C,value 0 outside plausible range 30-43 C
+7176,215,2025-01-21,blood_glucose,5000.0,mg/dL,value 5000 outside plausible range 20-800 mg/dL
+7227,217,2025-02-14,heart_rate,66.0,unknown,"unit must be 'bpm', got 'unknown'"
+7388,221,2025-02-17,diastolic_bp,,mmHg,value is missing or not finite
+7516,224,2025-09-03,body_temp_c,0.0,C,value 0 outside plausible range 30-43 C
+7528,225,2025-05-06,body_temp_c,0.0,C,value 0 outside plausible range 30-43 C
+7530,225,2025-05-06,blood_glucose,5000.0,mg/dL,value 5000 outside plausible range 20-800 mg/dL
+7565,225,2025-12-06,spo2,0.0,%,value 0 outside plausible range 50-100 %
+7643,227,2025-11-21,spo2,,%,value is missing or not finite
+7684,228,2025-06-07,body_temp_c,0.0,C,value 0 outside plausible range 30-43 C
+7689,228,2025-06-19,heart_rate,400.0,bpm,value 400 outside plausible range 20-250 bpm
+7722,229,2025-08-02,blood_glucose,5000.0,mg/dL,value 5000 outside plausible range 20-800 mg/dL
+7745,230,2025-02-23,spo2,,%,value is missing or not finite
+7751,230,2025-06-07,spo2,0.0,%,value 0 outside plausible range 50-100 %
+7757,230,2025-06-19,spo2,98.0,unknown,"unit must be '%', got 'unknown'"
+7790,231,2025-08-02,diastolic_bp,0.0,mmHg,value 0 outside plausible range 30-200 mmHg
+7794,231,2025-08-02,blood_glucose,,mg/dL,value is missing or not finite
+7824,232,2025-06-06,blood_glucose,115.0,unknown,"unit must be 'mg/dL', got 'unknown'"
+7831,232,2025-10-05,systolic_bp,0.0,mmHg,value 0 outside plausible range 50-300 mmHg
+8028,239,2025-01-31,blood_glucose,5000.0,mg/dL,value 5000 outside plausible range 20-800 mg/dL
+8081,240,2025-09-11,spo2,150.0,%,value 150 outside plausible range 50-100 %
+8138,242,2025-10-07,diastolic_bp,,mmHg,value is missing or not finite
+8245,246,2025-01-04,systolic_bp,133.0,unknown,"unit must be 'mmHg', got 'unknown'"
+8260,246,2025-03-02,body_temp_c,0.0,C,value 0 outside plausible range 30-43 C
+8276,246,2025-08-27,diastolic_bp,0.0,mmHg,value 0 outside plausible range 30-200 mmHg
+8321,247,2025-09-30,spo2,98.0,unknown,"unit must be '%', got 'unknown'"
+8393,250,2025-06-10,spo2,0.0,%,value 0 outside plausible range 50-100 %
+8401,250,2025-11-08,systolic_bp,,mmHg,value is missing or not finite
+8457,253,2025-03-12,heart_rate,400.0,bpm,value 400 outside plausible range 20-250 bpm
+8472,253,2025-06-05,blood_glucose,113.0,unknown,"unit must be 'mg/dL', got 'unknown'"
+8533,255,2025-02-11,systolic_bp,999.0,mmHg,value 999 outside plausible range 50-300 mmHg
+8562,255,2025-08-24,blood_glucose,5000.0,mg/dL,value 5000 outside plausible range 20-800 mg/dL
+8588,256,2025-07-11,diastolic_bp,,mmHg,value is missing or not finite
+8596,256,2025-09-24,body_temp_c,37.1,unknown,"unit must be 'C', got 'unknown'"
+8642,257,2025-06-20,diastolic_bp,76.0,unknown,"unit must be 'mmHg', got 'unknown'"
+8767,262,2025-10-29,systolic_bp,999.0,mmHg,value 999 outside plausible range 50-300 mmHg
+8801,263,2025-07-13,spo2,,%,value is missing or not finite
+8819,264,2025-02-04,spo2,150.0,%,value 150 outside plausible range 50-100 %
+8847,264,2025-12-25,heart_rate,81.0,unknown,"unit must be 'bpm', got 'unknown'"
+8854,264,2025-12-30,body_temp_c,0.0,C,value 0 outside plausible range 30-43 C
+8863,265,2025-05-22,systolic_bp,999.0,mmHg,value 999 outside plausible range 50-300 mmHg
+8873,265,2025-06-20,spo2,150.0,%,value 150 outside plausible range 50-100 %
+8977,269,2025-09-13,systolic_bp,0.0,mmHg,value 0 outside plausible range 50-300 mmHg
+9093,273,2025-04-19,heart_rate,400.0,bpm,value 400 outside plausible range 20-250 bpm
+9113,274,2025-05-30,spo2,0.0,%,value 0 outside plausible range 50-100 %
+9133,275,2025-06-25,systolic_bp,121.0,unknown,"unit must be 'mmHg', got 'unknown'"
+9143,275,2025-06-26,spo2,150.0,%,value 150 outside plausible range 50-100 %
+9170,276,2025-06-08,diastolic_bp,95.0,unknown,"unit must be 'mmHg', got 'unknown'"
+9194,277,2025-02-28,diastolic_bp,0.0,mmHg,value 0 outside plausible range 30-200 mmHg
+9248,278,2025-12-16,diastolic_bp,450.0,mmHg,value 450 outside plausible range 30-200 mmHg
+9252,278,2025-12-16,blood_glucose,-1.0,mg/dL,value -1 outside plausible range 20-800 mg/dL
+9275,279,2025-03-09,spo2,150.0,%,value 150 outside plausible range 50-100 %
+9372,281,2025-10-09,blood_glucose,5000.0,mg/dL,value 5000 outside plausible range 20-800 mg/dL
+9426,283,2025-09-05,blood_glucose,-1.0,mg/dL,value -1 outside plausible range 20-800 mg/dL
+9501,287,2025-01-26,heart_rate,0.0,bpm,value 0 outside plausible range 20-250 bpm
+9523,287,2025-09-12,systolic_bp,,mmHg,value is missing or not finite
+9531,287,2025-10-29,heart_rate,0.0,bpm,value 0 outside plausible range 20-250 bpm
+9534,287,2025-10-29,blood_glucose,90.0,unknown,"unit must be 'mg/dL', got 'unknown'"
+9585,289,2025-03-02,heart_rate,0.0,bpm,value 0 outside plausible range 20-250 bpm
+9601,289,2025-08-24,systolic_bp,0.0,mmHg,value 0 outside plausible range 50-300 mmHg
+9614,290,2025-02-07,diastolic_bp,,mmHg,value is missing or not finite
+9632,290,2025-08-24,diastolic_bp,450.0,mmHg,value 450 outside plausible range 30-200 mmHg
+9671,291,2025-11-20,spo2,150.0,%,value 150 outside plausible range 50-100 %
+9718,292,2025-10-22,body_temp_c,0.0,C,value 0 outside plausible range 30-43 C
+9760,293,2025-12-06,body_temp_c,98.6,C,value 98.6 outside plausible range 30-43 C
+9795,295,2025-04-09,heart_rate,400.0,bpm,value 400 outside plausible range 20-250 bpm
+9811,295,2025-06-15,systolic_bp,,mmHg,value is missing or not finite
+9839,296,2025-08-13,spo2,0.0,%,value 0 outside plausible range 50-100 %
+9878,297,2025-05-09,diastolic_bp,,mmHg,value is missing or not finite
+9922,298,2025-08-03,body_temp_c,,C,value is missing or not finite
+9930,298,2025-08-13,blood_glucose,99.0,unknown,"unit must be 'mg/dL', got 'unknown'"
+9957,300,2025-02-09,heart_rate,400.0,bpm,value 400 outside plausible range 20-250 bpm
+10046,303,2025-05-01,diastolic_bp,0.0,mmHg,value 0 outside plausible range 30-200 mmHg
+10068,303,2025-09-08,blood_glucose,216.0,unknown,"unit must be 'mg/dL', got 'unknown'"
+10077,304,2025-03-10,heart_rate,85.0,unknown,"unit must be 'bpm', got 'unknown'"
+10082,304,2025-04-22,diastolic_bp,450.0,mmHg,value 450 outside plausible range 30-200 mmHg
+10154,306,2025-02-05,diastolic_bp,0.0,mmHg,value 0 outside plausible range 30-200 mmHg
+10184,306,2025-07-28,diastolic_bp,0.0,mmHg,value 0 outside plausible range 30-200 mmHg
+10200,306,2025-10-19,blood_glucose,-1.0,mg/dL,value -1 outside plausible range 20-800 mg/dL
+10215,307,2025-05-17,heart_rate,59.0,unknown,"unit must be 'bpm', got 'unknown'"
+10312,310,2025-03-02,body_temp_c,98.6,C,value 98.6 outside plausible range 30-43 C
+10334,310,2025-11-23,diastolic_bp,84.0,unknown,"unit must be 'mmHg', got 'unknown'"
+10378,312,2025-03-08,body_temp_c,0.0,C,value 0 outside plausible range 30-43 C
+10453,314,2025-06-15,systolic_bp,134.0,unknown,"unit must be 'mmHg', got 'unknown'"
+10465,314,2025-11-13,systolic_bp,,mmHg,value is missing or not finite
+10586,317,2025-11-22,diastolic_bp,0.0,mmHg,value 0 outside plausible range 30-200 mmHg
+10734,321,2025-12-09,blood_glucose,118.0,unknown,"unit must be 'mg/dL', got 'unknown'"
+10755,322,2025-10-07,heart_rate,0.0,bpm,value 0 outside plausible range 20-250 bpm
+10818,324,2025-01-11,blood_glucose,141.0,unknown,"unit must be 'mg/dL', got 'unknown'"
+10864,326,2025-05-21,body_temp_c,,C,value is missing or not finite
+10910,327,2025-12-15,diastolic_bp,450.0,mmHg,value 450 outside plausible range 30-200 mmHg
+10963,329,2025-03-21,systolic_bp,0.0,mmHg,value 0 outside plausible range 50-300 mmHg
+10986,329,2025-07-17,blood_glucose,115.0,unknown,"unit must be 'mg/dL', got 'unknown'"
+10996,330,2025-03-13,body_temp_c,,C,value is missing or not finite
+11014,330,2025-08-25,body_temp_c,0.0,C,value 0 outside plausible range 30-43 C
+11069,331,2025-10-22,spo2,150.0,%,value 150 outside plausible range 50-100 %
+11071,332,2025-03-09,systolic_bp,102.0,unknown,"unit must be 'mmHg', got 'unknown'"
+11074,332,2025-03-09,body_temp_c,98.6,C,value 98.6 outside plausible range 30-43 C
+11215,335,2025-09-18,systolic_bp,999.0,mmHg,value 999 outside plausible range 50-300 mmHg
+11228,335,2025-12-28,diastolic_bp,0.0,mmHg,value 0 outside plausible range 30-200 mmHg
+11229,335,2025-12-28,heart_rate,,bpm,value is missing or not finite
+11232,335,2025-12-28,blood_glucose,108.0,unknown,"unit must be 'mg/dL', got 'unknown'"
+11297,337,2025-04-18,spo2,0.0,%,value 0 outside plausible range 50-100 %
+11298,337,2025-04-18,blood_glucose,-1.0,mg/dL,value -1 outside plausible range 20-800 mg/dL
+11300,337,2025-07-14,diastolic_bp,82.0,unknown,"unit must be 'mmHg', got 'unknown'"
+11443,342,2025-01-12,systolic_bp,0.0,mmHg,value 0 outside plausible range 50-300 mmHg
+11464,342,2025-09-15,body_temp_c,36.3,unknown,"unit must be 'C', got 'unknown'"
+11475,342,2025-12-09,heart_rate,,bpm,value is missing or not finite
+11599,347,2025-03-26,systolic_bp,116.0,unknown,"unit must be 'mmHg', got 'unknown'"
+11600,347,2025-03-26,diastolic_bp,81.0,unknown,"unit must be 'mmHg', got 'unknown'"
+11641,348,2025-10-03,systolic_bp,999.0,mmHg,value 999 outside plausible range 50-300 mmHg
+11662,349,2025-06-07,body_temp_c,98.6,C,value 98.6 outside plausible range 30-43 C
+11750,352,2025-11-27,diastolic_bp,0.0,mmHg,value 0 outside plausible range 30-200 mmHg
+11776,354,2025-02-13,body_temp_c,36.7,unknown,"unit must be 'C', got 'unknown'"
+11814,354,2025-12-01,blood_glucose,5000.0,mg/dL,value 5000 outside plausible range 20-800 mg/dL
+11815,355,2025-01-26,systolic_bp,,mmHg,value is missing or not finite
+11832,355,2025-02-28,blood_glucose,-1.0,mg/dL,value -1 outside plausible range 20-800 mg/dL
+11905,358,2025-02-04,systolic_bp,999.0,mmHg,value 999 outside plausible range 50-300 mmHg
+12075,362,2025-04-01,heart_rate,,bpm,value is missing or not finite
+12087,362,2025-06-03,heart_rate,400.0,bpm,value 400 outside plausible range 20-250 bpm
+12088,362,2025-06-03,body_temp_c,0.0,C,value 0 outside plausible range 30-43 C
+12154,364,2025-07-06,body_temp_c,0.0,C,value 0 outside plausible range 30-43 C
+12189,365,2025-02-19,heart_rate,67.0,unknown,"unit must be 'bpm', got 'unknown'"
+12191,365,2025-02-19,spo2,150.0,%,value 150 outside plausible range 50-100 %
+12282,368,2025-01-18,blood_glucose,5000.0,mg/dL,value 5000 outside plausible range 20-800 mg/dL
+12283,368,2025-01-28,systolic_bp,999.0,mmHg,value 999 outside plausible range 50-300 mmHg
+12447,372,2025-12-23,heart_rate,400.0,bpm,value 400 outside plausible range 20-250 bpm
+12455,373,2025-03-09,spo2,150.0,%,value 150 outside plausible range 50-100 %
+12474,373,2025-07-23,blood_glucose,5000.0,mg/dL,value 5000 outside plausible range 20-800 mg/dL
+12532,374,2025-12-12,body_temp_c,0.0,C,value 0 outside plausible range 30-43 C
+12539,375,2025-04-18,spo2,97.0,unknown,"unit must be '%', got 'unknown'"
+12544,375,2025-05-06,body_temp_c,36.5,unknown,"unit must be 'C', got 'unknown'"
+12550,375,2025-06-21,body_temp_c,98.6,C,value 98.6 outside plausible range 30-43 C
+12618,378,2025-05-17,blood_glucose,68.0,unknown,"unit must be 'mg/dL', got 'unknown'"
+12646,379,2025-09-10,body_temp_c,98.6,C,value 98.6 outside plausible range 30-43 C
+12715,382,2025-04-30,systolic_bp,0.0,mmHg,value 0 outside plausible range 50-300 mmHg
+12746,383,2025-06-15,diastolic_bp,,mmHg,value is missing or not finite
+12780,384,2025-02-16,blood_glucose,5000.0,mg/dL,value 5000 outside plausible range 20-800 mg/dL
+12793,384,2025-07-18,systolic_bp,999.0,mmHg,value 999 outside plausible range 50-300 mmHg
+12802,384,2025-08-11,body_temp_c,0.0,C,value 0 outside plausible range 30-43 C
+12820,385,2025-01-11,body_temp_c,,C,value is missing or not finite
+12855,385,2025-12-21,heart_rate,400.0,bpm,value 400 outside plausible range 20-250 bpm
+12870,386,2025-11-20,blood_glucose,-1.0,mg/dL,value -1 outside plausible range 20-800 mg/dL
+12937,388,2025-11-02,systolic_bp,999.0,mmHg,value 999 outside plausible range 50-300 mmHg
+13129,394,2025-10-26,systolic_bp,,mmHg,value is missing or not finite
+13130,394,2025-10-26,diastolic_bp,,mmHg,value is missing or not finite
+13135,394,2025-12-06,systolic_bp,999.0,mmHg,value 999 outside plausible range 50-300 mmHg
+13147,395,2025-05-07,systolic_bp,999.0,mmHg,value 999 outside plausible range 50-300 mmHg
+13150,395,2025-05-07,body_temp_c,98.6,C,value 98.6 outside plausible range 30-43 C
+13155,395,2025-08-09,heart_rate,0.0,bpm,value 0 outside plausible range 20-250 bpm
+13158,395,2025-08-09,blood_glucose,5000.0,mg/dL,value 5000 outside plausible range 20-800 mg/dL
+13191,397,2025-05-10,heart_rate,400.0,bpm,value 400 outside plausible range 20-250 bpm
+13263,398,2025-10-30,heart_rate,400.0,bpm,value 400 outside plausible range 20-250 bpm
+13280,399,2025-03-06,diastolic_bp,,mmHg,value is missing or not finite
+13292,399,2025-04-11,diastolic_bp,,mmHg,value is missing or not finite
+13363,401,2025-02-19,systolic_bp,0.0,mmHg,value 0 outside plausible range 50-300 mmHg
+13411,402,2025-07-17,systolic_bp,999.0,mmHg,value 999 outside plausible range 50-300 mmHg
+13520,406,2025-04-12,diastolic_bp,77.0,unknown,"unit must be 'mmHg', got 'unknown'"
+13524,406,2025-04-12,blood_glucose,5000.0,mg/dL,value 5000 outside plausible range 20-800 mg/dL
+13533,407,2025-04-21,heart_rate,,bpm,value is missing or not finite
+13551,407,2025-06-22,heart_rate,400.0,bpm,value 400 outside plausible range 20-250 bpm
+13571,408,2025-06-24,spo2,98.0,unknown,"unit must be '%', got 'unknown'"
+13605,409,2025-08-01,heart_rate,400.0,bpm,value 400 outside plausible range 20-250 bpm
+13620,409,2025-09-01,blood_glucose,98.0,unknown,"unit must be 'mg/dL', got 'unknown'"
+13677,412,2025-10-26,heart_rate,0.0,bpm,value 0 outside plausible range 20-250 bpm
+13722,413,2025-09-20,blood_glucose,,mg/dL,value is missing or not finite
+13747,414,2025-04-06,systolic_bp,126.0,unknown,"unit must be 'mmHg', got 'unknown'"
+13831,416,2025-08-12,systolic_bp,115.0,unknown,"unit must be 'mmHg', got 'unknown'"
+13851,416,2025-12-07,heart_rate,0.0,bpm,value 0 outside plausible range 20-250 bpm
+13921,418,2025-10-31,systolic_bp,96.0,unknown,"unit must be 'mmHg', got 'unknown'"
+14040,421,2025-07-21,blood_glucose,-1.0,mg/dL,value -1 outside plausible range 20-800 mg/dL
+14044,421,2025-08-29,body_temp_c,,C,value is missing or not finite
+14057,422,2025-09-12,spo2,94.0,unknown,"unit must be '%', got 'unknown'"
+14161,425,2025-12-25,systolic_bp,999.0,mmHg,value 999 outside plausible range 50-300 mmHg
+14190,426,2025-07-19,blood_glucose,88.0,unknown,"unit must be 'mg/dL', got 'unknown'"
+14209,426,2025-11-11,systolic_bp,999.0,mmHg,value 999 outside plausible range 50-300 mmHg
+14248,428,2025-02-05,body_temp_c,0.0,C,value 0 outside plausible range 30-43 C
+14313,429,2025-10-04,heart_rate,0.0,bpm,value 0 outside plausible range 20-250 bpm
+14329,430,2025-04-13,systolic_bp,999.0,mmHg,value 999 outside plausible range 50-300 mmHg
+14423,432,2025-04-06,spo2,,%,value is missing or not finite
+14469,433,2025-09-03,heart_rate,0.0,bpm,value 0 outside plausible range 20-250 bpm
+14512,434,2025-09-23,body_temp_c,98.6,C,value 98.6 outside plausible range 30-43 C
+14575,436,2025-06-09,systolic_bp,999.0,mmHg,value 999 outside plausible range 50-300 mmHg
+14616,437,2025-03-17,blood_glucose,,mg/dL,value is missing or not finite
+14707,440,2025-07-11,systolic_bp,999.0,mmHg,value 999 outside plausible range 50-300 mmHg
+14734,441,2025-04-09,body_temp_c,98.6,C,value 98.6 outside plausible range 30-43 C
+14791,442,2025-09-11,systolic_bp,999.0,mmHg,value 999 outside plausible range 50-300 mmHg
+14822,443,2025-06-10,diastolic_bp,450.0,mmHg,value 450 outside plausible range 30-200 mmHg
+14836,444,2025-02-05,body_temp_c,0.0,C,value 0 outside plausible range 30-43 C
+14864,444,2025-09-13,diastolic_bp,0.0,mmHg,value 0 outside plausible range 30-200 mmHg
+14963,447,2025-04-25,spo2,0.0,%,value 0 outside plausible range 50-100 %
+14981,448,2025-02-21,spo2,,%,value is missing or not finite
+14986,448,2025-04-02,body_temp_c,98.6,C,value 98.6 outside plausible range 30-43 C
+15030,449,2025-07-16,blood_glucose,,mg/dL,value is missing or not finite
+15043,450,2025-03-10,systolic_bp,,mmHg,value is missing or not finite
+15055,450,2025-05-15,systolic_bp,999.0,mmHg,value 999 outside plausible range 50-300 mmHg
+15085,451,2025-04-15,systolic_bp,,mmHg,value is missing or not finite
+15120,451,2025-11-01,blood_glucose,-1.0,mg/dL,value -1 outside plausible range 20-800 mg/dL
+15215,454,2025-06-01,spo2,96.0,unknown,"unit must be '%', got 'unknown'"
+15263,456,2025-08-17,spo2,97.0,unknown,"unit must be '%', got 'unknown'"
+15270,456,2025-09-03,blood_glucose,5000.0,mg/dL,value 5000 outside plausible range 20-800 mg/dL
+15295,457,2025-11-09,systolic_bp,,mmHg,value is missing or not finite
+15320,458,2025-08-31,diastolic_bp,70.0,unknown,"unit must be 'mmHg', got 'unknown'"
+15392,460,2025-05-08,diastolic_bp,0.0,mmHg,value 0 outside plausible range 30-200 mmHg
+15399,460,2025-08-31,heart_rate,0.0,bpm,value 0 outside plausible range 20-250 bpm
+15416,461,2025-07-12,diastolic_bp,450.0,mmHg,value 450 outside plausible range 30-200 mmHg
+15524,465,2025-04-12,diastolic_bp,,mmHg,value is missing or not finite
+15557,465,2025-10-12,spo2,0.0,%,value 0 outside plausible range 50-100 %
+15586,467,2025-02-19,body_temp_c,0.0,C,value 0 outside plausible range 30-43 C
+15618,467,2025-08-05,blood_glucose,,mg/dL,value is missing or not finite
+15628,467,2025-12-31,body_temp_c,,C,value is missing or not finite
+15641,468,2025-05-05,spo2,0.0,%,value 0 outside plausible range 50-100 %
+15645,468,2025-05-19,heart_rate,400.0,bpm,value 400 outside plausible range 20-250 bpm
+15648,468,2025-05-19,blood_glucose,5000.0,mg/dL,value 5000 outside plausible range 20-800 mg/dL
+15671,469,2025-03-29,spo2,,%,value is missing or not finite
+15678,469,2025-07-06,blood_glucose,76.0,unknown,"unit must be 'mg/dL', got 'unknown'"
+15744,471,2025-07-01,blood_glucose,-1.0,mg/dL,value -1 outside plausible range 20-800 mg/dL
+15748,471,2025-08-12,body_temp_c,0.0,C,value 0 outside plausible range 30-43 C
+15810,473,2025-01-01,blood_glucose,-1.0,mg/dL,value -1 outside plausible range 20-800 mg/dL
+15811,473,2025-01-18,systolic_bp,,mmHg,value is missing or not finite
+15848,474,2025-07-28,diastolic_bp,,mmHg,value is missing or not finite
+15862,474,2025-09-20,body_temp_c,,C,value is missing or not finite
+15879,475,2025-03-11,heart_rate,400.0,bpm,value 400 outside plausible range 20-250 bpm
+15920,476,2025-07-29,diastolic_bp,,mmHg,value is missing or not finite
+15969,477,2025-03-27,heart_rate,0.0,bpm,value 0 outside plausible range 20-250 bpm
+15983,477,2025-08-05,spo2,98.0,unknown,"unit must be '%', got 'unknown'"
+16028,478,2025-11-05,diastolic_bp,0.0,mmHg,value 0 outside plausible range 30-200 mmHg
+16281,484,2025-09-22,heart_rate,,bpm,value is missing or not finite
+16288,485,2025-01-16,body_temp_c,98.6,C,value 98.6 outside plausible range 30-43 C
+16399,488,2025-01-21,systolic_bp,0.0,mmHg,value 0 outside plausible range 50-300 mmHg
+16408,488,2025-02-21,body_temp_c,37.1,unknown,"unit must be 'C', got 'unknown'"
+16547,491,2025-11-14,spo2,150.0,%,value 150 outside plausible range 50-100 %
+16632,494,2025-10-05,blood_glucose,5000.0,mg/dL,value 5000 outside plausible range 20-800 mg/dL
+16736,497,2025-07-28,diastolic_bp,0.0,mmHg,value 0 outside plausible range 30-200 mmHg
+16805,500,2025-01-02,spo2,150.0,%,value 150 outside plausible range 50-100 %
+16819,2,2025-08-08,blood_glucose,135.0,mg/dL,duplicate reading for same patient/date/measure
+16820,109,2025-02-22,diastolic_bp,49.0,mmHg,duplicate reading for same patient/date/measure
+16821,78,2025-01-09,systolic_bp,144.0,mmHg,duplicate reading for same patient/date/measure
+16822,8,2025-04-25,heart_rate,80.0,bpm,duplicate reading for same patient/date/measure
+16823,87,2025-08-04,diastolic_bp,91.0,mmHg,duplicate reading for same patient/date/measure
+16824,444,2025-04-18,spo2,96.0,%,duplicate reading for same patient/date/measure
+16825,298,2025-10-17,systolic_bp,106.0,mmHg,duplicate reading for same patient/date/measure
+16826,400,2025-07-02,blood_glucose,88.0,mg/dL,duplicate reading for same patient/date/measure
+16827,279,2025-06-07,spo2,87.0,%,duplicate reading for same patient/date/measure
+16828,493,2025-03-29,body_temp_c,37.6,C,duplicate reading for same patient/date/measure
+16829,226,2025-12-19,systolic_bp,121.0,mmHg,duplicate reading for same patient/date/measure
+16830,444,2025-06-08,body_temp_c,37.0,C,duplicate reading for same patient/date/measure
+16831,126,2025-07-01,body_temp_c,37.1,C,duplicate reading for same patient/date/measure
+16832,176,2025-03-18,body_temp_c,36.3,C,duplicate reading for same patient/date/measure
+16833,164,2025-11-10,heart_rate,55.0,bpm,duplicate reading for same patient/date/measure
+16834,111,2025-04-30,blood_glucose,67.0,mg/dL,duplicate reading for same patient/date/measure
+16835,493,2025-06-25,diastolic_bp,80.0,mmHg,duplicate reading for same patient/date/measure
+16836,362,2025-12-08,systolic_bp,122.0,mmHg,duplicate reading for same patient/date/measure
+16837,157,2025-01-17,blood_glucose,118.0,mg/dL,duplicate reading for same patient/date/measure
+16838,86,2025-07-24,heart_rate,77.0,bpm,duplicate reading for same patient/date/measure
+16839,390,2025-08-26,systolic_bp,124.0,mmHg,duplicate reading for same patient/date/measure
+16840,419,2025-07-19,blood_glucose,95.0,mg/dL,duplicate reading for same patient/date/measure
+16841,95,2025-01-22,diastolic_bp,63.0,mmHg,duplicate reading for same patient/date/measure
+16842,186,2025-01-09,blood_glucose,103.0,mg/dL,duplicate reading for same patient/date/measure
+16843,339,2025-04-08,heart_rate,78.0,bpm,duplicate reading for same patient/date/measure
+16844,247,2025-09-26,blood_glucose,112.0,mg/dL,duplicate reading for same patient/date/measure
+16845,426,2025-05-03,body_temp_c,36.3,C,duplicate reading for same patient/date/measure
+16846,107,2025-06-10,diastolic_bp,0.0,mmHg,value 0 outside plausible range 30-200 mmHg
+16847,331,2025-10-19,body_temp_c,36.8,C,duplicate reading for same patient/date/measure
+16848,429,2025-03-10,blood_glucose,94.0,mg/dL,duplicate reading for same patient/date/measure
+16849,492,2025-03-28,body_temp_c,36.7,C,duplicate reading for same patient/date/measure
+16850,198,2025-12-29,heart_rate,92.0,bpm,duplicate reading for same patient/date/measure
+16851,21,2025-06-05,diastolic_bp,87.0,mmHg,duplicate reading for same patient/date/measure
+16852,387,2025-08-17,heart_rate,75.0,bpm,duplicate reading for same patient/date/measure
+16853,244,2025-10-15,body_temp_c,36.7,C,duplicate reading for same patient/date/measure
+16854,62,2025-06-09,diastolic_bp,89.0,mmHg,duplicate reading for same patient/date/measure
+16855,342,2025-04-27,body_temp_c,36.8,C,duplicate reading for same patient/date/measure
+16856,176,2025-11-26,blood_glucose,,mg/dL,value is missing or not finite
+16857,3,2025-08-26,body_temp_c,37.2,C,duplicate reading for same patient/date/measure
+16858,166,2025-07-06,diastolic_bp,77.0,mmHg,duplicate reading for same patient/date/measure
+16859,185,2025-01-23,body_temp_c,36.7,C,duplicate reading for same patient/date/measure
+16860,444,2025-06-08,blood_glucose,108.0,mg/dL,duplicate reading for same patient/date/measure
+16861,141,2025-03-18,body_temp_c,36.8,C,duplicate reading for same patient/date/measure
+16862,244,2025-10-15,diastolic_bp,89.0,mmHg,duplicate reading for same patient/date/measure
+16863,243,2025-12-28,spo2,99.0,%,duplicate reading for same patient/date/measure
+16864,179,2025-10-07,blood_glucose,127.0,mg/dL,duplicate reading for same patient/date/measure
+16865,12,2025-05-07,body_temp_c,37.3,C,duplicate reading for same patient/date/measure
+16866,453,2025-04-18,body_temp_c,37.1,C,duplicate reading for same patient/date/measure
+16867,52,2025-01-12,blood_glucose,102.0,mg/dL,duplicate reading for same patient/date/measure
+16868,136,2025-11-06,diastolic_bp,64.0,mmHg,duplicate reading for same patient/date/measure
+16869,67,2025-01-23,heart_rate,77.0,bpm,duplicate reading for same patient/date/measure
+16870,238,2025-04-02,body_temp_c,36.9,C,duplicate reading for same patient/date/measure
+16871,451,2025-10-27,blood_glucose,79.0,mg/dL,duplicate reading for same patient/date/measure
+16872,354,2025-09-22,diastolic_bp,75.0,mmHg,duplicate reading for same patient/date/measure
+16873,338,2025-06-21,systolic_bp,117.0,mmHg,duplicate reading for same patient/date/measure
+16874,11,2025-03-26,spo2,97.0,%,duplicate reading for same patient/date/measure
+16875,279,2025-03-09,heart_rate,80.0,bpm,duplicate reading for same patient/date/measure
+16876,355,2025-08-28,spo2,97.0,%,duplicate reading for same patient/date/measure
+16877,167,2025-11-29,diastolic_bp,66.0,mmHg,duplicate reading for same patient/date/measure
+16878,55,2025-05-25,heart_rate,83.0,bpm,duplicate reading for same patient/date/measure
+16879,67,2025-11-30,heart_rate,72.0,bpm,duplicate reading for same patient/date/measure
+16880,179,2025-10-07,heart_rate,78.0,bpm,duplicate reading for same patient/date/measure
+16881,401,2025-03-14,body_temp_c,36.9,C,duplicate reading for same patient/date/measure
+16882,414,2025-04-01,spo2,98.0,%,duplicate reading for same patient/date/measure
+16883,356,2025-04-16,body_temp_c,37.0,C,duplicate reading for same patient/date/measure
+16884,50,2025-09-01,body_temp_c,36.1,C,duplicate reading for same patient/date/measure
+16885,409,2025-07-01,body_temp_c,36.7,C,duplicate reading for same patient/date/measure
+16886,134,2025-02-07,body_temp_c,36.4,C,duplicate reading for same patient/date/measure
+16887,211,2025-02-07,blood_glucose,89.0,mg/dL,duplicate reading for same patient/date/measure
+16888,196,2025-06-10,body_temp_c,36.8,C,duplicate reading for same patient/date/measure
+16889,140,2025-09-13,diastolic_bp,78.0,mmHg,duplicate reading for same patient/date/measure
+16890,332,2025-06-03,spo2,99.0,%,duplicate reading for same patient/date/measure
+16891,285,2025-03-05,heart_rate,80.0,bpm,duplicate reading for same patient/date/measure
+16892,205,2025-03-31,spo2,97.0,%,duplicate reading for same patient/date/measure
+16893,345,2025-06-07,systolic_bp,146.0,mmHg,duplicate reading for same patient/date/measure
+16894,152,2025-03-30,spo2,99.0,%,duplicate reading for same patient/date/measure
+16895,295,2025-06-04,spo2,95.0,%,duplicate reading for same patient/date/measure
+16896,150,2025-06-18,systolic_bp,115.0,mmHg,duplicate reading for same patient/date/measure
+16897,119,2025-09-05,heart_rate,67.0,bpm,duplicate reading for same patient/date/measure
+16898,318,2025-08-30,spo2,97.0,%,duplicate reading for same patient/date/measure
+16899,128,2025-09-04,diastolic_bp,60.0,mmHg,duplicate reading for same patient/date/measure
+16900,450,2025-12-23,body_temp_c,36.9,C,duplicate reading for same patient/date/measure
+16901,384,2025-02-16,heart_rate,83.0,bpm,duplicate reading for same patient/date/measure
+16902,74,2025-11-23,diastolic_bp,70.0,mmHg,duplicate reading for same patient/date/measure

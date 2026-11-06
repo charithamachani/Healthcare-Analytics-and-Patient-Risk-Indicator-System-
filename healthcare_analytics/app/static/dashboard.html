@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Healthcare Analytics Dashboard (synthetic data)</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+<style>
+:root{--bg:#f4f6f9;--card:#fff;--text:#1d2530;--muted:#5d6b7a;--line:#d9e0e8;--warn:#fff3cd;--warnt:#664d03}
+@media (prefers-color-scheme:dark){:root{--bg:#12161c;--card:#1b222b;--text:#e6ebf1;--muted:#9aa7b5;--line:#2e3846;--warn:#3a3114;--warnt:#f2dc8a}}
+*{box-sizing:border-box}body{margin:0;font-family:system-ui,Segoe UI,Arial,sans-serif;background:var(--bg);color:var(--text)}
+header{padding:14px 20px;border-bottom:1px solid var(--line);background:var(--card)}
+h1{font-size:20px;margin:0 0 4px}.banner{background:var(--warn);color:var(--warnt);padding:8px 20px;font-size:13px;font-weight:600}
+main{max-width:1200px;margin:0 auto;padding:16px}
+.bar{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-bottom:14px}
+input,select,button{padding:8px 10px;border:1px solid var(--line);border-radius:6px;background:var(--card);color:var(--text);font-size:14px}
+button{background:#2a6fdb;color:#fff;border:0;cursor:pointer}#msg{font-size:13px;color:var(--muted)}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:12px;margin-bottom:14px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:14px}
+.kpi b{display:block;font-size:26px}.kpi span{color:var(--muted);font-size:13px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(420px,1fr));gap:14px;margin-bottom:14px}
+h2{font-size:15px;margin:0 0 10px}canvas{max-height:300px}
+table{width:100%;border-collapse:collapse;font-size:13px}td,th{padding:6px;border-bottom:1px solid var(--line);text-align:left}
+ol{margin:0;padding-left:20px;font-size:13px;line-height:1.5}
+@media(max-width:520px){.grid{grid-template-columns:1fr}}
+.tabs{display:flex;gap:6px;margin-bottom:12px}.tabs button{background:var(--card);color:var(--text);border:1px solid var(--line)}pre{white-space:pre-wrap;font-size:12px;margin:8px 0 0}.row{display:flex;gap:6px;flex-wrap:wrap;margin:6px 0}</style>
+</head>
+<body>
+<header><h1>Healthcare Analytics &amp; Patient Risk Indicator System</h1>
+<div style="font-size:13px;color:var(--muted)">Operational statistics and illustrative rule-based indicators on synthetic data</div></header>
+<div class="banner">EDUCATIONAL ANALYTICS ON SYNTHETIC DATA ONLY. Indicators are illustrative rule outputs, not medical diagnoses, and must not be used for real patient-care decisions.</div>
+<main>
+<div class="bar">
+  <input id="key" type="password" placeholder="Enter analyst or admin API key" size="32" autocomplete="off">
+  <button id="load">Load dashboard</button><span id="msg">Access is restricted: enter your API key to load the data.</span> <b id="role" style="font-size:13px"></b>
+</div>
+<div class="tabs"><button>Overview</button><button>Records</button><button>Live proof</button></div>
+<div id="t1">
+<div class="kpis" id="kpis"></div>
+<div class="grid">
+  <div class="card"><h2>Visits by department (outpatient vs admissions)</h2><canvas id="cDept"></canvas></div>
+  <div class="card"><h2>Monthly visits and admissions</h2><canvas id="cMonth"></canvas></div>
+  <div class="card"><h2>Measurement trend (monthly mean) <select id="mtype"></select></h2><canvas id="cTrend"></canvas></div>
+  <div class="card"><h2>Patients by number of illustrative flags</h2><canvas id="cFlags"></canvas></div>
+  <div class="card"><h2>Patients per rule code</h2><canvas id="cRules"></canvas></div>
+  <div class="card"><h2>Measurement summary</h2><div id="summary" style="overflow-x:auto"></div></div>
+</div>
+<div class="grid">
+  <div class="card"><h2>Indicator rules (illustrative, not clinical)</h2><div id="rules" style="overflow-x:auto"></div></div>
+  <div class="card"><h2>Limitations statement</h2><ol id="lims"></ol></div>
+</div>
+</div>
+<div id="t2" style="display:none"><div class="grid">
+  <div class="card"><h2>Look up a patient</h2>
+    <div class="row"><input id="pid" type="number" min="1" placeholder="Patient ID (e.g. 1-500)"><button id="pgo">Show</button></div>
+    <div id="pinfo" style="font-size:13px"></div><div id="pind" style="font-size:13px;margin:6px 0"></div>
+    <div id="pmeas" style="overflow:auto;max-height:280px"></div></div>
+  <div class="card" id="adminBox" style="display:none"><h2>Admin: add synthetic records</h2>
+    <div class="row"><select id="pband"></select><button id="addp">Add patient</button></div>
+    <div class="row"><input id="mp" type="number" placeholder="Patient ID" style="width:110px"><input id="md" type="date" value="2025-12-30">
+      <select id="mt2"></select><input id="mv" type="number" step="0.1" placeholder="Value" style="width:90px"><button id="addm">Add measurement</button></div>
+    <div class="row"><button id="runi">Recompute indicators</button></div>
+    <div style="font-size:12px;color:var(--muted)">Try value 986 for body_temp_c to see validation reject it. Identifying fields are never accepted.</div>
+    <pre id="aout"></pre></div>
+</div></div>
+<div id="t3" style="display:none"><div class="card"><h2>Live proof: access control and validation</h2>
+  <div class="row"><input id="ka" type="password" placeholder="Analyst key"><input id="kb" type="password" placeholder="Admin key"><button id="runproof">Run tests</button></div>
+  <div style="font-size:12px;color:var(--muted);margin-bottom:8px">Runs 7 real API calls and compares each result with the expected one (the last test adds 1 synthetic patient).</div>
+  <div id="proof" style="overflow-x:auto"></div></div></div>
+</main>
+<script>
+const $ = id => document.getElementById(id);
+const charts = {}; let trends = [], ranges = {};
+function draw(id, cfg){ if(charts[id]) charts[id].destroy(); charts[id] = new Chart($(id), cfg); }
+async function api(path, key){
+  const r = await fetch('/api' + path, {headers: key ? {'X-API-Key': key} : {}});
+  if(r.status === 401) throw new Error('Invalid or missing API key');
+  if(!r.ok){ let m = 'Error ' + r.status; try{ m = (await r.json()).error || m; }catch(e){} throw new Error(m); }
+  return (await r.json()).data;
+}
+function table(el, cols, rows){
+  el.textContent = ''; const t = document.createElement('table'); const h = t.insertRow();
+  cols.forEach(c => { const th = document.createElement('th'); th.textContent = c; h.appendChild(th); });
+  rows.forEach(r => { const tr = t.insertRow(); cols.forEach(c => { tr.insertCell().textContent = r[c] ?? ''; }); });
+  el.appendChild(t);
+}
+async function loadPublic(){
+  const [rl, lm] = await Promise.all([api('/rules'), api('/limitations')]);
+  ranges = rl.validation_ranges;
+  Object.keys(ranges).forEach(t => { const o = document.createElement('option'); o.value = o.textContent = t; $('mt2').appendChild(o); });
+  ['0-17','18-34','35-49','50-64','65+'].forEach(a => { const o = document.createElement('option'); o.value = o.textContent = a; $('pband').appendChild(o); });
+  table($('rules'), ['rule_code', 'measure_type', 'description'], rl.rules);
+  lm.limitations.forEach(t => { const li = document.createElement('li'); li.textContent = t; $('lims').appendChild(li); });
+}
+function drawTrend(){
+  const type = $('mtype').value, rows = trends.filter(t => t.measure_type === type);
+  const unit = ranges[type] ? ranges[type].unit : '';
+  draw('cTrend', {type:'line', data:{labels: rows.map(r => r.month), datasets:[{label: type + ' (' + unit + ')', data: rows.map(r => r.mean), borderColor:'#2a6fdb', tension:.25}]}});
+}
+async function loadAll(){
+  const key = $('key').value.trim(); $('msg').textContent = 'Loading...';
+  try{
+    const [ov, dept, month, tr, sum] = await Promise.all([
+      api('/analytics/overview', key), api('/analytics/visits-by-department', key),
+      api('/analytics/visits-monthly', key), api('/analytics/measurement-trends', key),
+      api('/analytics/measurements-summary', key)]);
+    $('kpis').textContent = '';
+    [['Patients', ov.patients], ['Visits', ov.visits], ['Admissions', ov.admissions], ['Valid measurements', ov.valid_measurements]]
+      .forEach(([l, v]) => { const d = document.createElement('div'); d.className = 'card kpi';
+        const b = document.createElement('b'); b.textContent = Number(v).toLocaleString();
+        const s = document.createElement('span'); s.textContent = l; d.append(b, s); $('kpis').appendChild(d); });
+    draw('cDept', {type:'bar', data:{labels: dept.map(d => d.department_name), datasets:[
+      {label:'Outpatient', data: dept.map(d => d.visits - d.admissions), backgroundColor:'#2a6fdb'},
+      {label:'Admissions', data: dept.map(d => d.admissions), backgroundColor:'#e0702b'}]},
+      options:{scales:{x:{stacked:true}, y:{stacked:true}}}});
+    draw('cMonth', {type:'line', data:{labels: month.map(m => m.month), datasets:[
+      {label:'All visits', data: month.map(m => m.visits), borderColor:'#2a6fdb', tension:.25},
+      {label:'Admissions', data: month.map(m => m.admissions), borderColor:'#e0702b', tension:.25}]}});
+    trends = tr; const types = [...new Set(tr.map(t => t.measure_type))];
+    $('mtype').textContent = ''; types.forEach(t => { const o = document.createElement('option'); o.value = o.textContent = t; $('mtype').appendChild(o); });
+    drawTrend();
+    table($('summary'), ['measure_type','n','mean','std','min','median','max'], sum);
+    try{
+      const ind = await api('/analytics/indicator-summary', key);
+      draw('cFlags', {type:'bar', data:{labels: ind.flag_count_distribution.map(d => d.flag_count + ' flag(s)'),
+        datasets:[{label:'Patients', data: ind.flag_count_distribution.map(d => d.patients), backgroundColor:'#2b9a6b'}]}});
+      const pr = Object.entries(ind.patients_per_rule);
+      draw('cRules', {type:'bar', data:{labels: pr.map(p => p[0]), datasets:[{label:'Patients', data: pr.map(p => p[1]), backgroundColor:'#a24bd0'}]}, options:{indexAxis:'y'}});
+    }catch(e){ $('msg').textContent = 'Indicators not computed yet: run python -m scripts.run_indicators'; return; }
+    $('msg').textContent = 'Loaded. Synthetic data only.';
+  }catch(e){ $('msg').textContent = e.message; }
+}
+async function call(method, path, key, body){
+  const o = {method, headers:{}}; if(key) o.headers['X-API-Key'] = key;
+  if(body){ o.headers['Content-Type'] = 'application/json'; o.body = JSON.stringify(body); }
+  const r = await fetch('/api' + path, o); let j = {}; try{ j = await r.json(); }catch(e){}
+  return {status: r.status, json: j};
+}
+const K = () => $('key').value.trim();
+function tab(n){ ['t1','t2','t3'].forEach((id,i) => $(id).style.display = (i+1 === n) ? '' : 'none'); }
+document.querySelectorAll('.tabs button').forEach((b,i) => b.onclick = () => tab(i+1));
+async function who(){
+  const r = await call('GET', '/whoami', K()), role = r.status === 200 ? r.json.data.role : null;
+  $('role').textContent = role ? 'Signed in as: ' + role + (role === 'admin' ? ' (read + write)' : ' (read-only)') : '';
+  $('adminBox').style.display = role === 'admin' ? '' : 'none';
+}
+async function go(){ await Promise.all([loadAll(), who()]); }
+$('pgo').onclick = async () => {
+  const id = $('pid').value; if(!id) return;
+  const [p, m, i] = await Promise.all([call('GET','/patients/'+id,K()), call('GET','/patients/'+id+'/measurements?limit=200',K()), call('GET','/patients/'+id+'/indicators',K())]);
+  if(p.status !== 200){ $('pinfo').textContent = p.status === 401 ? 'Enter a valid API key first.' : (p.json.error || 'Error ' + p.status); return; }
+  const d = p.json.data; $('pinfo').textContent = 'Patient ' + d.patient_id + ' | age band ' + d.age_band + ' | sex ' + (d.sex || '-') + ' | region ' + (d.region_code || '-');
+  const fired = i.json.data.filter(x => x.rule_code !== 'FLAG_COUNT_V1').map(x => x.rule_code), flag = i.json.data.find(x => x.rule_code === 'FLAG_COUNT_V1');
+  $('pind').textContent = flag ? 'Illustrative flags fired: ' + flag.indicator_value + (fired.length ? ' (' + fired.join(', ') + ')' : '') + '. Not a diagnosis.' : 'No indicators computed for this patient.';
+  table($('pmeas'), ['measurement_date','measure_type','value','unit'], m.json.data.slice(-30).reverse());
+};
+function show(r){ $('aout').textContent = r.status + ' ' + JSON.stringify(r.json.error ? {error: r.json.error, details: r.json.details} : r.json.data); }
+$('addp').onclick = async () => show(await call('POST','/patients',K(),{age_band: $('pband').value}));
+$('addm').onclick = async () => { const t = $('mt2').value;
+  show(await call('POST','/measurements',K(),{patient_id: +$('mp').value, measurement_date: $('md').value, measure_type: t, value: parseFloat($('mv').value), unit: ranges[t] ? ranges[t].unit : ''})); };
+$('runi').onclick = async () => show(await call('POST','/indicators/run',K()));
+$('runproof').onclick = async () => {
+  const a = $('ka').value.trim(), b = $('kb').value.trim();
+  const tests = [
+    ['Read data with NO key','GET','/analytics/overview',null,null,401],
+    ['Read data with a WRONG key','GET','/analytics/overview','wrong-key',null,401],
+    ['Analyst reads data','GET','/analytics/overview',a,null,200],
+    ['Analyst tries to write','POST','/patients',a,{age_band:'35-49'},403],
+    ['Admin sends a name field (identifying data)','POST','/patients',b,{age_band:'35-49',name:'Jane Doe'},400],
+    ['Admin sends impossible temperature 98.6 C','POST','/measurements',b,{patient_id:1,measurement_date:'2025-12-30',measure_type:'body_temp_c',value:98.6,unit:'C'},422],
+    ['Admin adds a valid synthetic patient','POST','/patients',b,{age_band:'35-49'},201]];
+  const rows = [];
+  for(const [name, m, p, k, body, exp] of tests){ const r = await call(m, p, k, body);
+    rows.push({Test: name, Expected: exp, Actual: r.status, Result: r.status === exp ? 'PASS' : 'FAIL', Message: r.json.error || ''}); }
+  table($('proof'), ['Test','Expected','Actual','Result','Message'], rows);
+};
+$('load').onclick = go; $('mtype').onchange = drawTrend;
+$('key').addEventListener('keydown', e => { if(e.key === 'Enter') go(); });
+loadPublic().catch(e => { $('msg').textContent = 'Could not load rules: ' + e.message; });
+</script>
+</body>
+</html>

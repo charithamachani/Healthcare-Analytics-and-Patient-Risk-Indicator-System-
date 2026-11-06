@@ -1,0 +1,12 @@
+fastapi>=0.110
+uvicorn>=0.29
+SQLAlchemy>=2.0
+PyMySQL>=1.1
+cryptography>=42        # needed by PyMySQL for MySQL 8 authentication
+pandas>=2.1
+numpy>=1.26
+matplotlib>=3.8
+python-dotenv>=1.0
+pytest>=8.0
+httpx>=0.27             # needed by FastAPI's test client
+# scikit-learn>=1.4     # OPTIONAL: only for a clearly-labelled educational experiment
